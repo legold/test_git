@@ -10,3 +10,5 @@ function hh(){
 	console.log('不要打我啊！');
 }
 ```
+
+`ctrl+alt+t最新更新`
