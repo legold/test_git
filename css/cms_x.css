@@ -182,7 +182,7 @@ body{
   box-sizing:border-box;
 }
 .cms_head_inner ul li:last-child a{
-  padding:0 0 10px 40px;
+  /* padding:0 0 10px 40px; */
   position:relative;
 }
 .cms_head_inner ul li a:hover{
@@ -213,7 +213,7 @@ body{
   min-height:500px;  /*预设一个默认高度*/
 }
 .cms_foot{
-  position:absolute;
+  position:fixed;
   bottom:0;
   height:30px;
   text-align:center;
@@ -221,7 +221,7 @@ body{
   background:#B5B5B5;
   line-height:30px;
   color:#fff;
-  font-size:14px;
+  font-size:12px;
 }
 
 
@@ -258,7 +258,7 @@ body{
   padding:10px 0px;
   text-align:center;
   color:#fff;
-  font-size:18px;
+  font-size:15px;
 }
 .tip:after{
   content:'';
@@ -336,7 +336,7 @@ body{
 
 .option .file_box_btn{
   position:relative;
-  width:180px;
+  width:160px;
   height:45px;
   float:left;
   margin-right:12px;
@@ -466,7 +466,7 @@ body{
 
 
 .per_submit{
-  width:200px;
+  width:170px;
   height:46px;
   color:white;
   background:#EC6942;
