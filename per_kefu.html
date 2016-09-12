@@ -36,7 +36,7 @@
             <div class="file_box">
                <div class="file_box_btn">
                   <span class="file_btn">上传图片</span>
-                  <input type="file" accept="image/*" value="上传图片">                             
+                  <input type="file" value="上传图片" onChange="showImage(this,this.parentNode.parentNode);" />                             
                </div>
                <div class="file_note">支持jpg/png格式，RGB模式，尺寸500px*500px，大小&lt;50kb</div>   
             </div>
@@ -52,7 +52,20 @@
     <script src="http://lib.sinaapp.com/js/jquery/1.10.1/jquery-1.10.1.min.js"></script> <!--新浪云计算公共库-->
     <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
     <script>
-
+      //上传图片并显示图片
+      function showImage(obj,par){
+         var path = obj.value;
+         var arr = path.split('\\');
+         var end_path = arr[arr.length-1];
+         //console.log(path,arr,end_path);  //上传的图片的路径
+         var img = document.createElement('img');
+         img.className = "upload_tu";
+         
+         par.appendChild(img);
+         img.previousSibling.parentNode.removeChild(img.previousSibling);
+         img.src = 'images/'+end_path;   
+         
+      }
     </script>
 </body>
 </html>

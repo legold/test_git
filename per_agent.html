@@ -199,7 +199,7 @@
        $(document).on('focus',obj,function(e){
           console.warn('请输入整数！');
           addTip('请输入整数！',e);
-          
+
        });
         $(obj).keyup(function(){
           var that = this;
@@ -251,11 +251,10 @@
         var val = $(this).val();
         console.log('就知道点我！',val);
         if(val.length>0){
-          console.log(22);
-          $a_btn.addClass('col_light');
+          //$a_btn.addClass('col_light');
           $a_commit.addClass('col_light');
         }else{
-          $a_btn.removeClass('col_light');
+          //$a_btn.removeClass('col_light');
           $a_commit.removeClass('col_light');
         }
       });

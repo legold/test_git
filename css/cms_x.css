@@ -275,6 +275,12 @@ body{
   margin-left:-6px;
 }
 
+.upload_tu{
+  max-width:140px;
+  margin-top:14px;
+  display:inline-block;
+}
+
 .per_page{
   background:#fff;
   /* padding:24px 40px; */
@@ -364,6 +370,7 @@ body{
   z-index:1;
   opacity:.01;
   filter:alpha(opacity=1);
+  color:transparent;
   cursor:pointer;
   outline:none;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
