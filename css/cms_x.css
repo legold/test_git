@@ -148,8 +148,28 @@ body{
   width:auto;
   height:30px;
   margin-top:10px;
+  float:left;
   /* margin-top:10px;  */ 
 }
+.cms_slogan{
+  color:#F8CDC3;
+  font-size:13px;
+  display:table-cell;
+  vertical-align:bottom;
+  height:50px;
+  padding:0 0 10px 20px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+}
+.cms_slogan em{
+  color:#FFF;
+  padding:0 3px;
+}
+
+
 .cms_head_inner ul{
   float:right;
   color:whitesmoke;
@@ -166,7 +186,6 @@ body{
 .cms_head_inner ul li a{
   color:#FCE7E0;
   font-size:14px;
-  display:inline-block;
   padding:0 30px;
   height:100%;
   -webkit-transition:all .6s ease;
