@@ -130,7 +130,7 @@
     function addTip(info,e){
           var oTip = document.createElement('em');
           oTip.className = 'tip';
-          oTip.innerText = info;
+          oTip.innerHTML = info;
           var e = e || window;
           //console.log(e.target.parentNode);          
           $(e.target.parentNode).append(oTip);
