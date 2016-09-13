@@ -159,7 +159,7 @@
         $(obj).blur(function(){
           $(this).next('.tip').remove();
         });
-        $(obj).bind('keyup',function(e){  //使用input事件，优于keyup，keyup的监听导致无法正常输入
+        $(obj).bind('keyup',function(e){  // 也可以使用input事件
           console.log('keyup启动！');
           clearTimeout(tr);
           var that = this;
