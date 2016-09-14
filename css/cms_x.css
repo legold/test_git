@@ -12,7 +12,7 @@ a:hover{text-decoration:underline;}
 dl,ul,ol,li{list-style:none;}
 input,a{border:0;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);} /*去掉手机端按钮点击出现的蓝色边框*/
 input[type=text],input[type=button]{outline:0;}
-body,th,td,input,select,textarea,button {font-size:12px;font-family:"Helvetica Neue","Microsoft YaHei",Arial, Helvetica, Verdana, Tahoma,sans-serif;}
+body,th,td,input,select,textarea,button {font-size:12px;font-family:'宋体',"Helvetica Neue","Microsoft YaHei",Arial, Helvetica, Verdana, Tahoma,sans-serif;}
 img{max-width:100%;vertical-align:middle;border:0;}  /*给img最大宽度设置为100%*/
 input,textarea,button,select,a{-webkit-tap-highlight-color:rgba(0,0,0,0);outline:none;-webkit-appearance:none;appearance:none;border:none;text-decoration:none;}
 a:hover{text-decoration:none;}
@@ -51,7 +51,7 @@ a:hover{text-decoration:none;}
 .load_box{
   /* width:300px;
   height:200px; */
-  padding:50px 120px;
+  padding:30px 90px;
   background:#fff;
   border-radius:10px;
   position:absolute;

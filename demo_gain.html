@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+  <meta content="telephone=no" name="format-detection">  
+  <meta content="email=no" name="format-detection"> 
+  <meta name="keywords" content="入香如净">
+  <meta name="description" content="入香如净">
+  <title>入香如净后台管理</title>
+  <link rel="stylesheet" type="text/css" href="css/cms_x.css" />
+  <style>
+  
+  </style>
+<script>
+    function myAddEvent(obj,sEvent,fn){
+		if(obj.attachEvent){
+			obj.attachEvent('on'+sEvent,fn);
+		}else if(obj.addEventListener){
+			obj.addEventListener(sEvent,fn,false);
+		}else{
+			obj['on'+sEvent] = fn;
+		}
+	}
+
+    ;(function(){
+      //var winH = $(window).height();
+      var winH = document.documentElement.clientHeight || window.innerHeight;
+      //alert(winH);
+      var BARH = 60+2+36;
+      myAddEvent(window,'load',function(){
+      	document.getElementById('cms_edit_frm').height = winH - BARH;
+      });
+      /*window.onload = function(){
+      	document.getElementById('cms_edit_frm').height = winH - BARH;
+      };*/      
+    })();
+    
+  </script>
+</head>
+
+<body>
+
+  <div class="page">
+      
+      <!--加载中提示信息-->
+      <div class="load_box" id="load_box">
+      	 <span>正在拼命加载中...</span>
+      </div>
+
+      <header class="cms_head">
+        <div class="cms_head_inner">
+          <a href="javascript:;"><img class="cms_logo" src="images/cms_logo.png" alt=""></a>
+          <ul class="cms_menu">
+            <li><a href="javascript:;"><span>首页</span></a></li>
+            <li><a href="javascript:;"><span>总代理管理</span></a></li>
+            <li class="on"><a href="javascript:;"><span>客服资料</span></a></li>
+            <li><a href="javascript:;"><span>盈利明细</span></a></li>
+            <li><a href="javascript:;"><span>登录</span></a></li>
+          </ul>
+        </div>
+      </header>
+      <iframe src="per_gain.html" frameborder="0" class="cms_edit_frm load_end_show" id="cms_edit_frm"></iframe>
+      <!-- <div class="cms_edit_frm"></div> -->
+      <footer class="cms_foot">
+         由&nbsp;香友会&nbsp;提供技术支持
+      </footer>
+   
+  </div>
+     
+  
+  <script src="http://lib.sinaapp.com/js/jquery/1.10.1/jquery-1.10.1.min.js"></script> <!--新浪云计算公共库-->
+  <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
+  
+  <script>
+  	(function(){
+  		var frm = document.getElementById('cms_edit_frm');
+  		var load_box = document.getElementById('load_box');
+
+  		myAddEvent(window,'load',function(){
+  			load_box.parentNode.removeChild(load_box);
+  		 	setTimeout(function(){
+  		 		frm.classList.add('frm_show');
+  		 		frm.style.opacity = 1;
+  		 		frm.style.filter = 'alpha(opacity='+100+')';
+  		 		frm.style.visibility = 'visible';
+  		 	},222);
+  		});
+  		
+  	})();
+  </script>
+
+</body>
+</html>
