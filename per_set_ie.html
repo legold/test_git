@@ -18,8 +18,16 @@
 </head>
 <body>
     
+    <form>  <!-- enctype="multipart/form-date" method="post"-->
+        <input type="file" class="file">
+        <input type="submit" class="sub">
+    </form>
+    <img src="C:\Users\haunglei\Desktop\prt1.jpg" class="fileImg">
+
+
     <div class="per_set per_page">
       <h2 class="bor_bot pad_h_36">您好！请完善以下资料，带有<span class="col_xin">*</span>的项目是必填的哦。</h2>
+      <img class="upload_tu" alt="">
       <form action="" method="" class="set_form">
         <div class="bor_bot pad_h_36 pad_v_24 option">
             <label for="identity">ID号<span class="col_xin">*</span></label><div class="txt_box"><input id="identity" type="text" class="txt" value="可在APP个人中心页面上方查看" /></div>
@@ -38,9 +46,10 @@
             <div class="file_box">
                <div class="file_box_btn">
                   <span class="file_btn">上传图片</span>
-                  <input id="bg_upload" type="file" value="上传图片" onChange="showImage(this,this.parentNode.parentNode,this);" />                             
+                  <input id="bg_upload" type="file" value="上传图片" class="file" />                             
                </div>
                <div class="file_note">支持jpg/png格式，RGB模式，尺寸640px*1136px，大小&lt;100kb</div>   
+               
             </div>
         </div>
         <div class="pad_h_36 pad_v_24 option">
@@ -48,9 +57,10 @@
             <div class="file_box">
                <div class="file_box_btn">
                   <span class="file_btn">上传头像</span>
-                  <input id="tou_upload" type="file" value="上传图片" onChange="showImage(this,this.parentNode.parentNode,this);" />   <!--accept="image/*"-->                           
+                  <input id="tou_upload" type="file" value="上传图片" class="file" />   <!--accept="image/*"-->                           
                </div>
                <div class="file_note">支持jpg/png格式，RGB模式，尺寸120px*120px，大小&lt;50kb</div>   
+               <img class="upload_tu" alt="">
             </div>
         </div>
         <h4 class="pad_h_36 pad_v_24">以下为个性设置部分，可选择性修改</h4>
@@ -106,37 +116,89 @@
       </form>
     </div>
 
-    <script src="http://lib.sinaapp.com/js/jquery/1.10.1/jquery-1.10.1.min.js"></script> <!--新浪云计算公共库-->
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script> 
     <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
     <script>
+      $(function(){
+        $(".file").change(function(){
+            var fileImg = $(".fileImg");
+            var explorer = navigator.userAgent;
+            var imgSrc = $(this)[0].value;
+            if (explorer.indexOf('MSIE') >= 0) {
+                if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)) {
+                    imgSrc = "";
+                    fileImg.attr("src","/img/default.png");
+                    return false;
+                }else{
+                  //alert(imgSrc);
+                    fileImg.attr("src",imgSrc);
+                }
+            }else{
+                if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)) {
+                    imgSrc = "";
+                    fileImg.attr("src","/img/default.png");
+                    return false;
+                }else{
+                    var file = $(this)[0].files[0];
+                    var url = URL.createObjectURL(file);                    
+                    fileImg.attr("src",url);
+                }
+            }
+        })
+    })
+    </script>
+    <script>
     //上传图片并显示图片
-    function showImage(obj,par,file){
+    /*
+    function showImage(obj,par){
        var path = obj.value;
        //console.log(path);
        var arr = path.split('\\');
        var end_path = arr[arr.length-1];
        //console.log(path,arr,end_path);  //上传的图片的路径
        var img = document.createElement('img');
-       img.className = "upload_tu";
+       //img.className = "upload_tu";
+       $(img).addClass('upload_tu');
        
        par.appendChild(img);
        img.previousSibling.parentNode.removeChild(img.previousSibling);
-       //img.src='C:\\fakepath\\产品图2.jpg';
-       //img.src = 'images/'+end_path;   
-       //
-       if(file.files&&file.files[0]){
-          var reader = new FileReader();
-          reader.onload = function(evt){img.src = evt.target.result};
-          reader.readAsDataURL(file.files[0]);
-       }else{//兼容IE
-          var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
-          file.select();
-          var src = document.selection.createRange().text;
-          img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
-       }
+       
        
     }
+    */
+   
+    //兼容IE的图片上传，本地预览
+    $(".file").change(function(){
+        /*var fileImg = $("<img class=\"upload_tu\">");
+        $(this).parents('.file_box').append(fileImg);
+        fileImg.prev('.upload_tu').remove();*/
+        //var fileImg = $(this).parents('.file_box').find('.upload_tu');
+        var fileImg = $('.upload_tu');
+        //alert(2);
+        var explorer = navigator.userAgent;
+        var imgSrc = $(this)[0].value;
+        if (explorer.indexOf('MSIE') >= 0) {
+            if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)) {
+                imgSrc = "";
+                fileImg.attr("src","/img/default.png");
+                return false;
+            }else{
+                fileImg.attr("src",imgSrc);
+            }
+        }else{
+            if (!/\.(jpg|jpeg|png|JPG|PNG|JPEG)$/.test(imgSrc)) {
+                imgSrc = "";
+                fileImg.attr("src","/img/default.png");
+                return false;
+            }else{
+                var file = $(this)[0].files[0];
+                var url = URL.createObjectURL(file);
+                fileImg.attr("src",url);
+            }
+        }
+    })
     
+
     /*针对IE无法支持placeholder处理*/
     ;(function(){
       var $txt = $('.txt_box').find('.txt');
