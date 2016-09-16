@@ -110,19 +110,17 @@
       </form>
     </div>
 
-    <!-- <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>  -->
-    <script src="js/jquery-1.10.1.min.js"></script>
-    <!-- <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script> -->
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script> 
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
 
     <script>
     
    
     //兼容IE的图片上传，本地预览
-    //new uploadPreview({UpBtn: 'bg_upload', DivShow: 'bg_file_box', ImgShow: 'bg_file'});
-    //new uploadPreview({UpBtn: 'tou_upload', DivShow: 'tou_file_box', ImgShow: 'tou_file'});
+    new uploadPreview({UpBtn: 'bg_upload', DivShow: 'bg_file_box', ImgShow: 'bg_file'});
+    new uploadPreview({UpBtn: 'tou_upload', DivShow: 'tou_file_box', ImgShow: 'tou_file'});
     
     
-    alert(2);
     /*针对IE无法支持placeholder处理*/
     ;(function(){
       var $txt = $('.txt_box').find('.txt');
