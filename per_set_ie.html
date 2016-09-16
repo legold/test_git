@@ -114,24 +114,7 @@
     <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
 
     <script>
-    //上传图片并显示图片
-    /*
-    function showImage(obj,par){
-       var path = obj.value;
-       //console.log(path);
-       var arr = path.split('\\');
-       var end_path = arr[arr.length-1];
-       //console.log(path,arr,end_path);  //上传的图片的路径
-       var img = document.createElement('img');
-       //img.className = "upload_tu";
-       $(img).addClass('upload_tu');
-       
-       par.appendChild(img);
-       img.previousSibling.parentNode.removeChild(img.previousSibling);
-       
-       
-    }
-    */
+    
    
     //兼容IE的图片上传，本地预览
     new uploadPreview({UpBtn: 'bg_upload', DivShow: 'bg_file_box', ImgShow: 'bg_file'});
@@ -144,7 +127,7 @@
       $txt.each(function(){
         $(this).attr('data-val',$(this).val());
       });
-      $txt.focus(function(){
+      $txt.click(function(){
         if($(this).val() == $(this).attr('data-val')){
           $(this).val('');
         }
@@ -153,7 +136,7 @@
           $(this).val($(this).attr('data-val'));
         }
       });
-    }).call(this);
+    })();
     
 
 
