@@ -34,12 +34,12 @@
       }
 
       if(navigator.userAgent.indexOf('MSIE')>-1){
-         if(navigator.userAgent.indexOf('MSIE 9.0') && !window.innerWidth){
+         if(navigator.userAgent.indexOf('MSIE 9.0')>0 && !window.innerWidth){
             //IE8
             window.location.href = lo_href + '_ie.html';
          }
 
-         if(navigator.userAgent.indexOf('MSIE 9.0')){
+         if(navigator.userAgent.indexOf('MSIE 9.0')>0){
             alert('IE9');
          }
          
