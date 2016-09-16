@@ -77,7 +77,7 @@ a:hover{text-decoration:none;}
 html,body{
   height:100%;
   width:100%;
-  /* position:relative; */
+  /* position:relative; */ /*这个在ie8下会有bug*/
 }
 body{
   background:#F4F4F4;
@@ -253,9 +253,12 @@ body{
   margin-left:-6px;
 }
 
+/* #bg_file_box,#tou_file_box{
+  padding-top:14px;
+} */
 .upload_tu{
   max-width:140px;
-  margin-top:14px;
+  /* margin-top:14px; */
   display:inline-block;
 }
 
@@ -362,6 +365,7 @@ body{
   white-space:nowrap;
   color:#989898;
   font-size:13px;
+  margin-bottom:14px;
 }
 
 /*个性设置*/

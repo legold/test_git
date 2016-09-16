@@ -15,13 +15,11 @@
    <meta name="description" content="">
    <meta name="keywords" content="">
    <link rel="stylesheet" type="text/css" href="css/cms_x_ie.css">
-   <script src="js/uploadPreview.min.js"></script>
 </head>
 <body>
     
-
     <div class="per_set per_page">
-      <h2 class="bor_bot pad_h_36">您好！请完善以下资料，带有<span class="col_xin">*</span>的项目是必填的哦。</h2>     
+      <h2 class="bor_bot pad_h_36">您好！请完善以下资料，带有<span class="col_xin">*</span>的项目是必填的哦。</h2>
       <form action="" method="" class="set_form">
         <div class="bor_bot pad_h_36 pad_v_24 option">
             <label for="identity">ID号<span class="col_xin">*</span></label><div class="txt_box"><input id="identity" type="text" class="txt" value="可在APP个人中心页面上方查看" /></div>
@@ -40,10 +38,9 @@
             <div class="file_box">
                <div class="file_box_btn">
                   <span class="file_btn">上传图片</span>
-                  <input id="bg_upload" type="file" value="上传图片" class="file" />                             
+                  <input id="bg_upload" type="file" value="上传图片" onChange="showImage(this,this.parentNode.parentNode,this);" />                             
                </div>
                <div class="file_note">支持jpg/png格式，RGB模式，尺寸640px*1136px，大小&lt;100kb</div>   
-               <div id="bg_file_box"><img id="bg_file" class="upload_tu" alt=""></div>
             </div>
         </div>
         <div class="pad_h_36 pad_v_24 option">
@@ -51,10 +48,10 @@
             <div class="file_box">
                <div class="file_box_btn">
                   <span class="file_btn">上传头像</span>
-                  <input id="tou_upload" type="file" value="上传图片" class="file" />   <!--accept="image/*"-->                           
+                  <input id="tou_upload" type="file" value="上传图片" onChange="showImage(this,this.parentNode.parentNode,this);" />   <!--accept="image/*"-->                           
                </div>
                <div class="file_note">支持jpg/png格式，RGB模式，尺寸120px*120px，大小&lt;50kb</div>   
-               <div id="tou_file_box"><img id="tou_file" class="upload_tu" alt=""></div>
+               <img class="upload_tu" alt="">
             </div>
         </div>
         <h4 class="pad_h_36 pad_v_24">以下为个性设置部分，可选择性修改</h4>
@@ -110,13 +107,11 @@
       </form>
     </div>
 
-    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script> 
+    <script src="http://lib.sinaapp.com/js/jquery/1.10.1/jquery-1.10.1.min.js"></script> <!--新浪云计算公共库-->
     <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
-
     <script>
     //上传图片并显示图片
-    /*
-    function showImage(obj,par){
+    function showImage(obj,par,file){
        var path = obj.value;
        //console.log(path);
        var arr = path.split('\\');
@@ -128,16 +123,28 @@
        
        par.appendChild(img);
        img.previousSibling.parentNode.removeChild(img.previousSibling);
-       
+       //img.src='C:\\fakepath\\产品图2.jpg';
+       //img.src = 'images/'+end_path;   
+       //
+       if(file.files&&file.files[0]){
+          var reader = new FileReader();
+          reader.onload = function(evt){img.src = evt.target.result};
+          reader.readAsDataURL(file.files[0]);
+       }else{//兼容IE
+          /*var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+          file.select();
+          var src = document.selection.createRange().text;
+          img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;*/
+          this.select();
+          top.parent.document.body.focus();
+          var src = document.selection.createRange().text;
+          document.selection.empty();          
+          img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";         
+          img.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = src;
+       }
        
     }
-    */
-   
-    //兼容IE的图片上传，本地预览
-    new uploadPreview({UpBtn: 'bg_upload', DivShow: 'bg_file_box', ImgShow: 'bg_file'});
-    new uploadPreview({UpBtn: 'tou_upload', DivShow: 'tou_file_box', ImgShow: 'tou_file'});
     
-
     /*针对IE无法支持placeholder处理*/
     ;(function(){
       var $txt = $('.txt_box').find('.txt');
