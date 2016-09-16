@@ -50,9 +50,9 @@
   <div class="page">
       
       <!--加载中提示信息-->
-      <div class="load_box" id="load_box">
-      	 <span>正在拼命加载中...</span>
-      </div>
+      <!-- <div class="load_box" id="load_box">
+         <span>正在拼命加载中...</span>
+      </div> -->
 
       <div class="cms_head">
         <div class="cms_head_inner">
@@ -85,11 +85,11 @@
   		var frm = document.getElementById('cms_edit_frm');
   		var load_box = document.getElementById('load_box');  		
   		myAddEvent(window,'load',function(){
-        load_box.style.display = 'none';
+        /*load_box.style.display = 'none';
         load_box.style.opacity = 0;
-        load_box.style.visibility = 'hidden';
+        load_box.style.visibility = 'hidden';*/
   			//load_box.parentNode.removeChild(load_box);
-        $(load_box).remove();
+        //$(load_box).remove();
   		 	setTimeout(function(){
   		 		frm.classList.add('frm_show');
           $(frm).addClass('frm_show');
