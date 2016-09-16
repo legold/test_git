@@ -19,15 +19,37 @@
   
   </style>
 <script>
+    //判断浏览器类型，ie则进行跳转
+    (function(){
+      var lo_href = location.href;
+      var reg = /php\b/g;
+      var reg2 = /html\b/g;
+      
+      if(reg2.test(lo_href)){
+        lo_href = lo_href.substring(0,lo_href.length-5);
+        //console.log(lo_href);
+      }else{
+        lo_href = lo_href.substring(0,lo_href.length-4);
+        //console.log(lo_href);
+      }
+
+      if(navigator.userAgent.indexOf('MSIE')>-1){
+         window.location.href = lo_href + '_ie.html';
+      }else{  //非IE
+         return;
+      }
+    })();
+
+
     function myAddEvent(obj,sEvent,fn){
-		if(obj.attachEvent){
-			obj.attachEvent('on'+sEvent,fn);
-		}else if(obj.addEventListener){
-			obj.addEventListener(sEvent,fn,false);
-		}else{
-			obj['on'+sEvent] = fn;
-		}
-	}
+  		if(obj.attachEvent){
+  			obj.attachEvent('on'+sEvent,fn);
+  		}else if(obj.addEventListener){
+  			obj.addEventListener(sEvent,fn,false);
+  		}else{
+  			obj['on'+sEvent] = fn;
+  		}
+  	}
 
     ;(function(){
       //var winH = $(window).height();
@@ -92,9 +114,11 @@
   		greet.innerText = str;
   		load_box.insertBefore(greet,load_box.childNodes[0]);*/
   		myAddEvent(window,'load',function(){
+        load_box.style.display = 'none';
   			load_box.parentNode.removeChild(load_box);
   		 	setTimeout(function(){
-  		 		frm.classList.add('frm_show');
+  		 		//frm.classList.add('frm_show');
+          $(frm).addClass('frm_show');
   		 		frm.style.opacity = 1;
   		 		frm.style.filter = 'alpha(opacity='+100+')';
   		 		frm.style.visibility = 'visible';

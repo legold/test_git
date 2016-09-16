@@ -60,7 +60,7 @@ a:hover{text-decoration:none;}
   position:absolute;
   left:50%;top:50%;
  /*  margin:-130px 0 0 -150px; */
- margin:-70px 0 0 -100px;
+  margin:-70px 0 0 -100px;
   z-index:20;
   font-size:18px;
   color:#808080;
@@ -68,7 +68,6 @@ a:hover{text-decoration:none;}
   letter-spacing:1px;
   text-align:center;
   line-height:80px;
-
 }
 
 
@@ -349,6 +348,7 @@ body{
   width:100%;
   height:100%;
   z-index:1;
+  visibility:visible;
   opacity:.01;
   filter:alpha(opacity=1);
   color:transparent;
@@ -357,6 +357,7 @@ body{
   -webkit-tap-highlight-color:rgba(0,0,0,0);
   -webkit-appearance:none;
   appearance:none;
+  background:transparent;
 }
 
 .file_box .file_note{

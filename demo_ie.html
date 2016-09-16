@@ -80,19 +80,23 @@
   <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
   
   <script>
-  
+
   	(function(){
   		var frm = document.getElementById('cms_edit_frm');
   		var load_box = document.getElementById('load_box');  		
   		myAddEvent(window,'load',function(){
         load_box.style.display = 'none';
-  			load_box.parentNode.removeChild(load_box);
+        load_box.style.opacity = 0;
+        load_box.style.visibility = 'hidden';
+  			//load_box.parentNode.removeChild(load_box);
+        $(load_box).remove();
   		 	setTimeout(function(){
   		 		frm.classList.add('frm_show');
+          $(frm).addClass('frm_show');
   		 		frm.style.opacity = 1;
   		 		frm.style.filter = 'alpha(opacity='+100+')';
   		 		frm.style.visibility = 'visible';
-  		 	},222);
+  		 	},2222);
   		});
   		
   	})();

@@ -15,6 +15,7 @@
    <meta name="description" content="">
    <meta name="keywords" content="">
    <link rel="stylesheet" type="text/css" href="css/cms_x.css">
+   <script src="js/uploadPreview.min.js"></script>
 </head>
 <body>
     
@@ -38,9 +39,10 @@
             <div class="file_box">
                <div class="file_box_btn">
                   <span class="file_btn">上传图片</span>
-                  <input id="bg_upload" type="file" value="上传图片" onChange="showImage(this,this.parentNode.parentNode);" />                             
+                  <input id="bg_upload" type="file" value="上传图片" />                             
                </div>
                <div class="file_note">支持jpg/png格式，RGB模式，尺寸640px*1136px，大小&lt;100kb</div>   
+               <div id="bg_file_box"><img id="bg_file" class="upload_tu" alt=""></div>
             </div>
         </div>
         <div class="pad_h_36 pad_v_24 option">
@@ -48,9 +50,10 @@
             <div class="file_box">
                <div class="file_box_btn">
                   <span class="file_btn">上传头像</span>
-                  <input id="tou_upload" type="file" value="上传图片" onChange="showImage(this,this.parentNode.parentNode);" />   <!--accept="image/*"-->                           
+                  <input id="tou_upload" type="file" value="上传图片" />   <!--accept="image/*"-->                           
                </div>
                <div class="file_note">支持jpg/png格式，RGB模式，尺寸120px*120px，大小&lt;50kb</div>   
+               <div id="tou_file_box"><img id="tou_file" class="upload_tu" alt=""></div>
             </div>
         </div>
         <h4 class="pad_h_36 pad_v_24">以下为个性设置部分，可选择性修改</h4>
@@ -110,7 +113,7 @@
     <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
     <script>
     //上传图片并显示图片
-    function showImage(obj,par){
+    /*function showImage(obj,par){
        var path = obj.value;
        var arr = path.split('\\');
        var end_path = arr[arr.length-1];
@@ -122,8 +125,11 @@
        img.previousSibling.parentNode.removeChild(img.previousSibling);
        img.src = 'images/'+end_path;   
        
-    }
-
+    }*/
+    
+    //兼容IE的图片上传，本地预览
+    new uploadPreview({UpBtn: 'bg_upload', DivShow: 'bg_file_box', ImgShow: 'bg_file'});
+    new uploadPreview({UpBtn: 'tou_upload', DivShow: 'tou_file_box', ImgShow: 'tou_file'});
     
 
 
