@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Expires" content="0">
+   <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+   <meta content="yes" name="apple-mobile-web-app-capable">
+   <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+   <meta content="telephone=no" name="format-detection">  
+   <meta content="email=no" name="format-detection"> 
+   <title>拍卖成交确认书</title>
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <style>
+   body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,select,textarea,p, button,
+    table,th,td,blockquote,address,hr,figure,section,nav{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;}
+    fieldset,img{border:0;}
+    table{border-collapse:collapse;border-spacing:0;}
+    address,caption,cite,code,dfn,em,strong,th,i,var{font-weight:normal;font-style:normal;}
+    caption,th{text-align:left;}
+    h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+    q:before,q:after{content:'';}
+    abbr,acronym{border:0;}
+    a{text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    dl,ul,ol,li{list-style:none;}
+    input,a{border:0;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);} /*去掉手机端按钮点击出现的蓝色边框*/
+    input[type=text],input[type=button]{outline:0;}
+    body,th,td,input,select,textarea,button {font-size:12px;font-family:"Helvetica Neue","Microsoft YaHei",Arial, Helvetica, Verdana, Tahoma,sans-serif;}
+    img{max-width:100%;vertical-align:middle;border:0;}  /*给img最大宽度设置为100%*/
+    input,textarea,button,select,a{-webkit-tap-highlight-color:rgba(0,0,0,0);outline:none;-webkit-appearance:none;appearance:none;border:none;text-decoration:none;}
+    a:hover{text-decoration:none;}
+
+   body{
+      background:white;
+      font-family:'宋体','Microsoft YaHei',Arial,Helvetica,sans-serif;
+      color:#676767;
+   }
+   .bor_b{
+      border-bottom:1px solid #676767;
+   }
+   input{
+      text-align:center;
+   }
+   .ipt_30{
+      width:30px;
+   }
+   .per_contract{
+      line-height:180%;
+      font-size:14px;
+   }
+   .per_contract h1{
+      font-size:16px;
+      text-align:center;
+      padding:20px 0px 0;
+      letter-spacing:1px;
+      font-weight:bold;
+   }
+   .con p{
+      /* text-indent:2em; */
+      line-height:160%;
+      padding:4px 10px;
+   }
+   
+   .account h5{
+      text-align:center;
+      font-size:14px;
+      padding:20px 0 10px;
+   }
+   .account-table{
+      margin:10px 10px 20px;
+      overflow-x:auto;
+   }
+   .account-table table{
+      border-collapse:collapse;  
+      width:400px;      
+   }
+   .account-table table td,.account-table table th{
+      border-collapse:collapse;  
+      border:1px solid #808080;
+      width:100px;
+      text-align:center;
+      padding:5px 0;
+   }
+   .wei_info,.pai_info{
+      font-size:14px;
+      padding:10px;
+      overflow:hidden;
+      position:relative;
+   }
+   .wei_info .wei_info_l{
+      float:left;
+      width:80%;  
+      overflow:hidden;
+   }
+   .wei_info .wei_info_r{
+      float:right; 
+      position:absolute;
+      right:10px;
+      top:10px;
+         
+   }
+   .wei_info_r p{
+      white-space:nowrap;
+   }
+
+   
+   .pai_info p{
+      text-align:right;
+   }
+
+   .sign_done{
+      font-size:12px;
+      overflow:hidden;
+      padding:20px 0 20px;
+   }
+   .sign_done .mai_sign, .sign_done .pai_sign{
+      width:49%;
+   }
+   .sign_done .mai_sign{
+       float:left;
+   }
+   .sign_done .pai_sign{
+      float:right;
+   }
+   
+   </style>
+</head>
+<body>
+    
+    <div class="per_page per_contract">
+       <h1>拍卖成交确认书</h1>
+       <form action="" method="">
+         <div class="wei_info">
+           <div class="wei_info_l">
+             <p><label for="">拍卖会网址：</label><input type="text" class="bor_b"></p>
+             <p><label for="pai_man">拍卖人：</label><input id="pai_man" class="pai_man bor_b" type="text" placeholder="北京香友会拍卖有限公司"></p>
+             <p><label for="pai_body">拍卖师：</label><input id="pai_body" class="pai_man bor_b" type="text" placeholder="赫英松"></p>
+             <p><label for="">确认书编号：</label><input type="text" class="bor_b"></p><p><label for="">买受人：</label><input type="text" class="bor_b"></p><p><label for="">代理人：</label><input type="text" class="bor_b"></p>
+             
+
+           </div>
+         </div>
+
+         <div class="con">
+           <p>第<input type="text" class="ipt_30 bor_b">号竞买人于<input class="bor_b ipt_30" type="text">年<input class="bor_b ipt_30" type="text">月<input class="bor_b ipt_30" type="text">日<input type="text" class="ipt_30 bor_b">时在本拍卖人举办的<input type="text" class="bor_b">拍卖会竞得如下拍卖标的，成为该拍品的法定买受人：</p>
+           <div class="account-table">
+              <table>
+                 <thead>
+                   <tr>
+                     <th>拍卖序号</th>
+                     <th>拍卖标的名称</th>
+                     <th>单位</th>
+                     <th>数量</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td>1</td>
+                     <td>2</td>
+                     <td>3</td>
+                     <td>4</td>                     
+                   </tr>
+                   <tr>
+                     <td>成交金额</td>
+                     <td colspan="3" style="text-align:left;">（大写）</td>
+                   </tr>
+                 </tbody>
+              </table>             
+           </div>
+           <p>1、买受人了解《中华人民共和国拍卖法》，并认真阅读本次拍卖会的《拍卖规则》和有关规定，自愿遵守执行，承认拍卖结果，当场签署本确认书。</p>
+           <p>2、买受人安排代理人支付成交金额款项。</p>
+           <p>3、因买受人违约造成该拍卖标的再行拍卖的，再行拍卖的价款低于上述成交金额的，买受人必须补足差额。</p>
+           <p>4、买受人应在付清上述全款后<input type="text" class="bor_b ipt_30" placeholder="5">日内（节假日可顺延）受领拍卖标的，逾期须支付<input type="text" class="bor_b ipt_30" placeholder="10">元/日的保管费用；在此期间未能取得拍卖标的则有权要求拍卖人承担违约责任。</p>
+           <p>5、买受人要求对其身份保密的，拍卖人应当为其保密。因拍卖人失密而造成买受人损失的，拍卖人应赔偿损失并承担违约责任。</p>
+           <p>6、拍卖人应保证买受人受领的拍卖标的与展示的拍卖标的一致，否则，买受人有权要求拍卖人赔偿。</p>
+           <p>7、拍卖人应协助买受人办理买受标的的证照变更、产权过户等手续。</p>
+           <p>8、双方在履行过程中发生的争议，可通过协商或由相关部门调解解决；协商或调解不成的，可通过提交仲裁委员会仲裁或依法向人民法院提起诉讼方式解决。</p>
+           <p>9、本确认书一式三份，经双方签章后生效。</p>
+           
+           <div class="sign_done">
+             <div class="mai_sign">
+               <p>买受人（签章）</p>
+               <p><input class="bor_b ipt_30" type="text">年<input class="bor_b ipt_30" type="text">月<input class="bor_b ipt_30" type="text">日</p>
+             </div>
+             <div class="pai_sign">
+               <p>拍卖人（签章）</p>
+               <p><input class="bor_b ipt_30" type="text">年<input class="bor_b ipt_30" type="text">月<input class="bor_b ipt_30" type="text">日</p>
+             </div>
+           </div>
+
+         </div>  
+       </form>
+       
+
+    </div>
+
+    <script src="http://lib.sinaapp.com/js/jquery/1.10.1/jquery-1.10.1.min.js"></script> 
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
+    <script>
+    
+
+    </script>
+</body>
+</html>

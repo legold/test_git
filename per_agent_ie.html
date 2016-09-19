@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Expires" content="0">
+   <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+   <meta content="yes" name="apple-mobile-web-app-capable">
+   <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+   <meta content="telephone=no" name="format-detection">  
+   <meta content="email=no" name="format-detection"> 
+   <title>总代理管理</title>
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <link rel="stylesheet" type="text/css" href="css/cms_x_ie.css">
+   <style>   
+    html,body,.per_agent,.agent_frm{
+      height:100%;
+      overflow:hidden;
+    }
+    .scroll_area{
+      -webkit-overflow-scrolling:touch;
+      overflow:auto;
+      height:100%;
+    }
+    .agent_frm{
+      padding-bottom:180px;
+    }
+    .per_agent{
+      /* margin-bottom:200px; */
+      height:100%;
+    }
+    .per_page{
+      background:transparent;
+    }
+    .per_page h2,.per_page .agent_line {
+      background:white;
+      display:table;
+      width:100%;
+    }
+    .agent_line{
+      padding:24px 70px;      
+    }
+    .agent_line .avatar{
+      width:66px;
+      height:66px;
+      border:none;
+      outline:none;
+      float:left;
+    }
+    .agent_line .agent_man{
+      color:#9e9e9e;
+      font-size:13px;
+      display:inline-block;
+      padding-left:10px;
+      margin-top:12px;
+    }
+    .agent_line .agent_man .log_time{      
+      padding:10px 0 10px 5px;
+    }
+    .agent_line .agent_man em{
+      font-size:15px;
+      color:#000;
+      padding:0 5px;
+    }
+    .agent_line .percent_box{
+      float:right;
+      height:40px;
+      /* line-height:40px; */
+      margin-top:13px;
+      font-size:15px;
+      /* display:table-cell;
+      vertical-align:middle; */
+    }
+    .percent_box label{
+      color:#989898;
+    }
+    .percent_box .bor{
+      display:inline-block; 
+      padding:0 4px;
+      position:relative;
+    }
+    .percent_box .bor input{
+      height:40px;
+      width:40px;
+      line-height:40px;
+      text-align:center;
+      background:transparent;
+      display:inline-block;
+      color:#989898;
+    }
+    .percent_box .bor b{
+      color:#989898;
+    }
+    .add_agent_box{
+      overflow:hidden;
+      margin:30px 0;
+      padding:0 100px 0 140px;
+      position:fixed;
+      bottom:0px;
+      left:70px;
+      right:70px;
+    }
+    .add_agent_box input{
+      height:60px;
+      line-height:60px;
+      font-size:15px;
+    }
+    .add_agent_box .add_btn,
+    .add_agent_box .agent_submit{
+      -webkit-transition:all ease .333s;
+      -moz-transition:all ease .333s;
+      -ms-transition:all ease .333s;
+      -o-transition:all ease .333s;
+      transition:all ease .333s;
+    }
+    .add_agent_box .add_btn{
+      width:140px;
+      float:left;
+      text-align:center;
+      color:#FFF;
+      font-size:16px;
+      background:#B5B5B5;
+      margin-left:-100%;
+      position:relative;
+      left:-140px;
+      cursor:pointer;
+    }
+    .add_agent_box .agent_txt{
+      width:100%;
+      float:left;
+      padding:0 10px;
+      color:#808080;
+    }
+    .add_agent_box .agent_submit{
+      float:left;
+      width:100px;
+      margin-left:-100px;
+      position:relative;
+      right:-100px;
+      cursor:pointer;
+      background:#B5B5B5;
+      color:#fff;
+    }
+    .add_btn.col_light{
+      background:#ec6942;
+    }
+    .agent_submit.col_light{
+      background:#ec6942;
+    }
+   </style>
+
+</head>
+<body>
+    
+    <div class="per_set per_page per_agent">
+      
+      <div  class="set_form agent_frm" id="agent_frm">
+        <h2 class="bor_bot pad_h_36">您好！以下为您所有的总代理：</h2>
+        <div class="scroll_area" id="scroll_area">
+           <div class="bor_bot agent_line">
+              <a href="javascript:;"><img class="avatar" src="images/avatar.jpg" alt=""></a>
+              <div class="agent_man">
+                  <em>老王</em>ID号:19272/登录名:18292871827
+                  <p class="log_time">最后登录时间：2016-09-19 14:13:07</p>
+              </div>
+              <div class="percent_box">
+                <label for="">设置分成比例：</label>
+                <span class="bor"><input class="check_3 percent num" type="text" value="0" /><b>%</b></span>
+              </div>
+            </div>
+
+            <div class="bor_bot agent_line">
+              <a href="javascript:;"><img class="avatar" src="images/avatar.jpg" alt=""></a>
+              <div class="agent_man">
+                  <em>老王</em>ID号:19272/登录名:18292871827
+                  <p class="log_time">最后登录时间：2016-09-19 14:13:07</p>
+              </div>
+              <div class="percent_box">
+                <label for="">设置分成比例：</label>
+                <span class="bor"><input class="check_3 percent num" type="text" value="0" /><b>%</b></span>
+              </div>
+            </div>
+
+            <div class="bor_bot agent_line">
+              <a href="javascript:;"><img class="avatar" src="images/avatar.jpg" alt=""></a>
+              <div class="agent_man">
+                  <em>老王</em>ID号:19272/登录名:18292871827
+                  <p class="log_time">最后登录时间：2016-09-19 14:13:07</p>
+              </div>
+              <div class="percent_box">
+                <label for="">设置分成比例：</label>
+                <span class="bor"><input class="check_3 percent num" type="text" value="0" /><b>%</b></span>
+              </div>
+            </div>
+        </div>
+        
+        
+        <div class="add_agent_box" id="add_agent_box">
+           <input type="text" class="agent_txt" id="agent_txt" value="请输入要添加为总代理的会员ID号，多个ID号用逗号隔开 " />
+           <input type="button" value="+添加总代理" class="add_btn" id="add_btn" />           
+           <input type="button" value="提交" class="agent_submit" id="agent_submit" />
+        </div>
+
+      </div>
+    </div>
+
+    <script src="http://lib.sinaapp.com/js/jquery/1.10.1/jquery-1.10.1.min.js"></script> 
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
+
+    <script>
+    /*针对IE无法支持placeholder处理*/
+    ;(function(){
+      var $txt = $('#agent_txt');
+      $txt.each(function(){
+        $(this).attr('data-val',$(this).val());
+      });
+      $txt.click(function(){
+        if($(this).val() == $(this).attr('data-val')){
+          $(this).val('');
+        }
+      }).blur(function(){
+        if($(this).val() == '' || $(this).val().length == 0){
+          $(this).val($(this).attr('data-val'));
+        }
+      });
+    })();
+
+   function addTip(info,e){
+          var oTip = document.createElement('em');
+          //oTip.className = 'tip';
+          $(oTip).addClass('tip');
+          oTip.innerHTML = info;
+          var e = e || window;        
+          $(e.target.parentNode).append(oTip);
+          var $oTip_h = $(oTip).outerHeight(true);
+          $(oTip).css({
+            'top':-($oTip_h+10)
+          });
+          var e_move = setTimeout(function(){  //提示显示3秒后消失
+            $(oTip).remove();
+          },3000);
+    }
+
+    var tr;
+
+    function setHead(obj,num){
+      $(obj).each(function(){ //初始设置的值保存起来
+        var default_val = $(this).val();
+        $(this).attr('dft_val',default_val);
+      });
+
+       //限制只能输入数字
+        $(document).on('focus',obj,function(e){        
+          addTip('请输入整数！',e);
+        });
+        $(document).on('keyup',obj,function(){
+          var that = this;
+          var val = $(that).val();
+          if(isNaN(val)){
+            val = val.replace(/\D/g,'');
+            $(that).val(val);
+          }
+          if($(this).hasClass('percent')){
+            if(val>100){
+              $(that).val($(that).attr('dft_val'));
+            }
+          }else{
+            if(val>255){
+              $(that).val($(that).attr('dft_val'));
+            }
+          }
+        });
+        $(document).on('blur',obj,function(){
+          $(this).parent('.bor').find('.tip').remove();
+        });
+
+      
+      $(obj).blur(function(){ //恢复默认值
+        var val = $(this).val();
+        var val2 = $(this).attr('dft_val');
+        if(!val || val.length == 0){
+          //console.log('啊哦！值要初始化了哦！');
+          $(this).val(val2);
+        }
+      });
+
+    }
+ 
+    setHead('.check_3',3);
+ 
+
+
+    //添加总代理
+    function addAgent(){
+      var $a_btn = $('#add_btn'),
+          $a_txt = $('#agent_txt'),
+          $a_commit = $('#agent_submit');
+     
+      $a_txt.bind('keyup',function(){
+        var val = $(this).val();
+        //console.log('就知道点我！',val);
+        if(val.length>0){
+          //$a_btn.addClass('col_light');
+          $a_commit.addClass('col_light');
+        }else{
+          //$a_btn.removeClass('col_light');
+          $a_commit.removeClass('col_light');
+        }
+      });
+      $a_txt.blur(function(){
+        //console.log('主人，不要走，决战到天亮！');        
+      });
+      $a_commit.click(function(){
+        if($a_txt.val().length>0){
+           //console.log('可以添加总代理！');
+           //根据用户输入ID号，用你的函数查询这个人的信息，返回json数据
+           //数据包含人物头像，人名，ID号，登录名，然后就拼接下面的字符串就OK了
+           var $n_dom = $('<div class="bor_bot agent_line"><a href="javascript:;"><img class="avatar" src="images/avatar.jpg" alt=""></a><span class="agent_man"><em>老王</em>ID号:19272/登录名:18292871827</span><div class="percent_box"><label for="">设置分成比例：</label><span class="bor"><input class="check_3 percent num" type="text" value="0" /><b>%</b></span></div></div>');
+           $('#scroll_area').append($n_dom);
+        }
+      });
+    }
+
+    addAgent();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Expires" content="0">
+   <meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1">
+   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+   <meta content="yes" name="apple-mobile-web-app-capable">
+   <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+   <meta content="telephone=no" name="format-detection">  
+   <meta content="email=no" name="format-detection"> 
+   <title>您的个人资料</title>
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <link rel="stylesheet" type="text/css" href="css/cms_x_ie.css">
+   <script src="js/uploadPreview.min.js"></script>
+</head>
+<body>
+    
+
+    <div class="per_set per_page">
+      <h2 class="bor_bot pad_h_36">您好！请完善以下资料，带有<span class="col_xin">*</span>的项目是必填的哦。</h2>     
+      <form action="" method="" class="set_form">
+        <div class="bor_bot pad_h_36 pad_v_24 option">
+            <label for="identity">ID号<span class="col_xin">*</span></label><div class="txt_box"><input id="identity" type="text" class="txt" value="可在APP个人中心页面上方查看" /></div>
+        </div>
+        <div class="bor_bot pad_h_36 pad_v_24 option">
+            <label for="phone">注册手机号<span class="col_xin">*</span></label><div class="txt_box"><input id="phone" type="tel" class="txt" value="您在注册入香如净APP时使用的手机号码" /></div>
+        </div>
+        <div class="bor_bot pad_h_36 pad_v_24 option">
+            <label for="group_name">组织名称<span class="col_xin">*</span></label><div class="txt_box"><input id="group_name" type="text" class="txt" value="显示于APP首页中间个人中心块" /></div>
+        </div>
+        <div class="bor_bot pad_h_36 pad_v_24 option">
+            <label for="intro">文字简介<span class="col_xin">*</span></label><div class="txt_box"><textarea id="intro" cols="30" rows="10" class="txt">此处填写个人/组织的简介</textarea></div>
+        </div>
+        <div class="bor_bot pad_h_36 pad_v_24 option">
+            <label for="">背景图上传<span class="col_xin">*</span></label>
+            <div class="file_box">
+               <div class="file_box_btn">
+                  <!-- <span class="file_btn">上传图片</span> -->
+                  <label for="bg_upload" class="file_btn">上传图片</label>
+                  <input id="bg_upload" type="file" value="上传图片" class="file" />                             
+               </div>
+               <div class="file_note">支持jpg/png格式，RGB模式，尺寸640px*1136px，大小&lt;100kb</div>   
+               <!-- <div id="bg_file_box"><img id="bg_file" class="upload_tu" alt=""></div> -->
+               <div class="tu_box">
+                  <div id="cur_file_box" class="cur_file_box">当前图片:<img src="http://wxpic.4006188666.com/upimg/kf/1474212681305041.jpg" class="upload_tu"></div>
+                  <div style="display:table-cell;vertical-align:middle;"><span style="margin-top:24%;float:left;">新上传图片:</span><div id="bg_file_box" class="bg_file_box" style="display:inline-block;"><img id="bg_file" class="upload_tu" alt=""></div></div>
+               </div>
+            </div>
+        </div>
+        <div class="pad_h_36 pad_v_24 option">
+            <label for="">首页展示头像<span class="col_xin">*</span></label>
+            <div class="file_box">
+               <div class="file_box_btn">
+                  <!-- <span class="file_btn">上传头像</span> -->
+                  <label for="tou_upload" class="file_btn">上传图片</label>
+                  <input id="tou_upload" type="file" value="上传图片" class="file" />   <!--accept="image/*"-->                           
+               </div>
+               <div class="file_note">支持jpg/png格式，RGB模式，尺寸120px*120px，大小&lt;50kb</div>   
+               <!-- <div id="tou_file_box"><img id="tou_file" class="upload_tu" alt=""></div> -->
+               <div class="tu_box">
+                  <div id="cur_file_box" class="cur_file_box">当前图片:<img src="http://wxpic.4006188666.com/upimg/kf/1474212681305041.jpg" class="upload_tu"></div>
+                  <div style="display:table-cell;vertical-align:middle;"><span style="margin-top:24%;float:left;">新上传图片:</span><div id="tou_file_box" class="tou_file_box" style="display:inline-block;"><img id="tou_file" class="upload_tu" alt=""></div></div>
+               </div>
+            </div>
+        </div>
+        <h4 class="pad_h_36 pad_v_24">以下为个性设置部分，可选择性修改</h4>
+        <div class="bor_bot pad_h_36 pad_v_24 option_t">
+            <label for="">四大板块标题</label>
+            <div class="set_txt txt_one_4">
+              <span class="bor"><input class="check_4 zhong" type="text" value="限时闪购" /></span>
+              <span class="bor"><input class="check_4 zhong" type="text" value="一级竞拍" /></span>
+              <span class="bor"><input class="check_4 zhong" type="text" value="商品库" /></span>
+              <span class="bor"><input class="check_4 zhong" type="text" value="香内参"></span> 
+            </div>
+        </div>
+        <div class="bor_bot pad_h_36 pad_v_24 option_t">
+            <label for="">标题颜色</label>
+            <div class="set_txt txt_one_3">
+              <span class="bor"><b>R:</b><input class="check_3 num" type="text" value="236" /></span>
+              <span class="bor"><b>G:</b><input class="check_3 num" type="text" value="105" /></span>
+              <span class="bor"><b>B:</b><input class="check_3 num" type="text" value="66" /></span>
+            </div>
+        </div>
+        <div class="bor_bot pad_h_36 pad_v_24 option_t">
+            <label for="">副标题内容</label>
+            <div class="set_txt txt_two_4">
+              <span class="bor"><input class="check_10 zhong" type="text" value="高级供应权限 限时闪" /></span>
+              <span class="bor"><input class="check_10 zhong" type="text" value="沉香一级竞拍 公平公正" /></span>
+              <span class="bor"><input class="check_10 zhong" type="text" value="绝对权限 一对一供应" /></span>
+              <span class="bor"><input class="check_10 zhong" type="text" value="国际沉香行情 在线动态"></span> 
+            </div>
+        </div>
+        <div class="bor_bot pad_h_36 pad_v_24 option_t">
+            <label for="">副标题颜色</label>
+            <div class="set_txt txt_one_3">
+              <span class="bor"><b>R:</b><input class="check_3 num" type="text" value="236" /></span>
+              <span class="bor"><b>G:</b><input class="check_3 num" type="text" value="105" /></span>
+              <span class="bor"><b>B:</b><input class="check_3 num" type="text" value="66" /></span>
+            </div>
+        </div>
+        <div class="bor_bot pad_h_36 pad_v_24 option_t" style="display:table-cell;">
+            <label for="">中部文字背景色</label>
+            <div class="set_txt set_txt_inline txt_one_3">
+              <span class="bor"><b>R:</b><input class="check_3 num" type="text" value="236" /></span>
+              <span class="bor"><b>G:</b><input class="check_3 num" type="text" value="105" /></span>
+              <span class="bor"><b>B:</b><input class="check_3 num" type="text" value="66" /></span>              
+            </div>
+            <div class="touming txt_one_3 set_txt">
+              <label for="" style="width:auto;padding:0 0 0 10px;">透明度</label>
+              <span class="bor"><input class="check_3 percent num" type="text" value="80" /><b>%</b></span>
+            </div>
+        </div>
+        <div class="pad_h_36 pad_v_24" style="padding-left:44px;">
+          <input type="button" value="确认提交" class="per_submit" />
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script> 
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>');</script>
+
+    <script>
+    
+   
+    //兼容IE的图片上传，本地预览
+    new uploadPreview({UpBtn: 'bg_upload', DivShow: 'bg_file_box', ImgShow: 'bg_file'});
+    new uploadPreview({UpBtn: 'tou_upload', DivShow: 'tou_file_box', ImgShow: 'tou_file'});
+    
+    
+    /*针对IE无法支持placeholder处理*/
+    ;(function(){
+      var $txt = $('.txt_box').find('.txt');
+      $txt.each(function(){
+        $(this).attr('data-val',$(this).val());
+      });
+      $txt.click(function(){
+        if($(this).val() == $(this).attr('data-val')){
+          $(this).val('');
+        }
+      }).blur(function(){
+        if($(this).val() == '' || $(this).val().length == 0){
+          $(this).val($(this).attr('data-val'));
+        }
+      });
+    })();
+    
+
+
+    function addTip(info,e){
+          var oTip = document.createElement('em');
+          //oTip.className = 'tip';
+          $(oTip).addClass('tip');
+          oTip.innerHTML = info;
+          var e = e || window;        
+          $(e.target.parentNode).append(oTip);
+          var $oTip_h = $(oTip).outerHeight(true);
+          $(oTip).css({
+            'top':-($oTip_h+10)
+          });
+          var e_move = setTimeout(function(){  //提示显示3秒后消失
+            $(oTip).remove();
+          },3000);
+    }
+
+    var tr;
+
+    function setHead(obj,num){
+      $(obj).each(function(){ //初始设置的值保存起来
+        var default_val = $(this).val();
+        $(this).attr('dft_val',default_val);
+      });
+
+      if($(obj).hasClass('zhong')){  //限制只能输入中文
+        $(obj).focus(function(e){
+          //alert(22);
+          //$(this).css('color','red');
+          addTip('请输入中文！',e); 
+
+        });
+        $(obj).blur(function(){
+          $(this).next('.tip').remove();
+        });
+        $(obj).bind('keyup',function(e){  // 也可以使用input事件         
+          clearTimeout(tr);
+          var that = this;
+          tr = setTimeout(function(){  //每次键盘抬起后，延迟2秒来验证
+             var val = $(that).val();
+             var s_val = val.substring(0,num);
+             var reg = /[^\u4e00-\u9fa5]/g;
+             if(e.keyCode == 32){
+               if(val.length > num){
+                 $(that).val(s_val);               
+               }
+             }else{
+               if(val.length > num){
+                 $(that).val(s_val);               
+               }else if(reg.test(val)){
+                 val = val.replace(reg,'');
+                 $(that).val(val);
+               }
+             }
+             
+          },888);
+          
+        });
+
+      }else{  //限制只能输入数字
+        $(obj).focus(function(e){
+          //console.warn('请输入整数！');  IE中不支持console
+          addTip('请输入整数！',e);
+        });
+        $(obj).keyup(function(){
+          var that = this;
+          var val = $(that).val();
+          if(isNaN(val)){
+            val = val.replace(/\D/g,'');
+            $(that).val(val);
+          }
+          if($(this).hasClass('percent')){
+            if(val>100){
+              $(that).val($(that).attr('dft_val'));
+            }
+          }else{
+            if(val>255){
+              $(that).val($(that).attr('dft_val'));
+            }
+          }
+        });
+        $(obj).blur(function(){
+          $(this).parent('.bor').find('.tip').remove();
+        });
+      }
+      
+      $(obj).blur(function(){ //恢复默认值
+        var val = $(this).val();
+        var val2 = $(this).attr('dft_val');
+        if(!val || val.length == 0){
+          //console.log('啊哦！值要初始化了哦！');
+          $(this).val(val2);
+        }
+      });
+
+    }
+    setHead('.check_4',4);
+    setHead('.check_3',3);
+    setHead('.check_10',11);
+
+    </script>
+</body>
+</html>
